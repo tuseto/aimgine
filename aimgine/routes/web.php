@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//-----------------------------------------------------ADMIN------------------------------------------------------//
+Route::group(['middleware' => ['web']], function () {
+    Route::get('admin', 'admin\LoginController@login');
+    Route::post('admin', 'admin\LoginController@doLogin');
+    Route::get('admin/logout', 'admin\LoginController@logout');
 });
