@@ -50,7 +50,7 @@
                                             </thead>
                                             <tbody>
                                                 @foreach($sliders as $slider)
-                                                <tr class="odd gradeX">
+                                                <tr class="odd gradeX" style="max-height:100px;">
                                                     <td> {{$slider->position}} </td>
                                                     <td>
                                                         {{$slider->text}}
