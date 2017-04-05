@@ -19,7 +19,7 @@ class SliderController extends Controller
     }
 
     public function store(Request $request){
-        $this->validate($request, ['text' => 'required|min:3','image' => 'required','position' => 'required']);
+        $this->validate($request, ['text' => 'required|min:3','image' => 'required','position' => 'required|unique:sliders']);
         $slider = new Slider();
         if($request->file('image') !== null){
             $imgResource = $request->file('image');
@@ -78,7 +78,7 @@ class SliderController extends Controller
         $slider->position = $request['position'];
         $slider->text = $request['text'];
         $slider->save();
-        return back();
+        return back()->withErrors('Slider updated');
     }
 
     public function destroy(Request $request, Slider $slider) {
@@ -88,6 +88,6 @@ class SliderController extends Controller
             unlink('./content/img/sliders/' . $slider->image);
         }
         $slider->delete();
-        return redirect()->back();
+        return redirect()->back()->withErrors('Slider deleted');
     }
 }

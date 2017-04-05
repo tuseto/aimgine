@@ -27,12 +27,12 @@
                                                 <div class="form-group">
                                                     <label for="exampleInputPassword1">Slider position</label>
                                                     <div class="input-group">
-                                                        <input type="text" class="form-control" name="position" id="exampleInputPassword1" placeholder="Position">
+                                                        <input type="text" class="form-control" name="position" value="{{ old('position') }}" id="exampleInputPassword1" placeholder="Position">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Text</label>
-                                                    <textarea class="form-control" rows="3" name="text"></textarea>
+                                                    <textarea class="form-control" rows="3" name="text">{{ old('text') }}</textarea>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="exampleInputFile1">Image</label>

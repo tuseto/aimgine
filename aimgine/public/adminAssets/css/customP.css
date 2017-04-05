@@ -1,0 +1,26 @@
+.backMessage{
+    position: absolute;
+    background: grey;
+    color: white;
+    top: 40%;
+    z-index: 9999999999;
+    width: 100%;
+    text-align: center;
+    line-height: 30px;
+    font-size: medium;
+}
+.actionBtns{
+    width: 40px !important;
+    min-width: 40px !important;
+    max-width: 40px !important;
+    background-color: transparent !important;
+}
+.actionBtns button{
+    width: 66px !important;
+}
+.actionBtns::before{
+    content: none !important;
+}
+.actionBtns::after{
+    content: none !important;
+}

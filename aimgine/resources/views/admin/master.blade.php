@@ -46,6 +46,9 @@ License: You must have a valid license purchased only from themeforest(the above
         <link href="{{URL::to('adminAssets/css/layout.min.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{URL::to('adminAssets/css/darkblue.min.css')}}" rel="stylesheet" type="text/css" id="style_color" />
         <link href="{{URL::to('adminAssets/css/custom.min.css')}}" rel="stylesheet" type="text/css" />
+
+        <link href="{{URL::to('adminAssets/css/customP.css')}}" rel="stylesheet" type="text/css" />
+
         <!-- END PAGE LEVEL STYLES -->
         <!-- BEGIN THEME LAYOUT STYLES -->
         <!-- END THEME LAYOUT STYLES -->
@@ -56,7 +59,7 @@ License: You must have a valid license purchased only from themeforest(the above
         @if($errors)
         <div class="">
             @foreach($errors->all() as $err)
-                <div class="">{{ $err }}</div>
+                <div class="backMessage">{{ $err }}</div>
             @endforeach
         </div>
         @endif
@@ -98,6 +101,9 @@ License: You must have a valid license purchased only from themeforest(the above
                 {
                     $('#radio1003').attr('checked', 'checked');
                 });
+            })
+            $(document).click(function(){
+                $('.backMessage').css('visibility','hidden');
             })
         </script>
 

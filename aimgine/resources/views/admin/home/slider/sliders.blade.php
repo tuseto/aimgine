@@ -64,12 +64,11 @@
                                                             <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"> Actions
                                                                 <i class="fa fa-angle-down"></i>
                                                             </button>
-                                                            <ul class="dropdown-menu pull-left" role="menu">
+                                                            <ul class="dropdown-menu pull-left actionBtns" role="menu">
                                                                 <li>
                                                                     <form method="GET" action="{{URL::to('admin/home/slider/'.$slider->id.'/edit')}}" style="display:inline-block;">
                                                                         <button class="btn btn-primary" type="submit">Edit</button>
                                                                     </form>
-
                                                                 </li>
                                                                 <li>
                                                                     <form method="POST" action="{{URL::to('admin/home/slider/'.$slider->id)}}" style="display:inline-block;">
