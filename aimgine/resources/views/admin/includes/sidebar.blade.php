@@ -59,14 +59,14 @@
                 </a>
                 <ul class="sub-menu">
                     <li class="nav-item  ">
-                        <a href="ui_metronic_grid.html" class="nav-link ">
+                        <a href="{{ URL::to('admin/home/slider') }}" class="nav-link ">
                             <span class="title">Slider</span>
                         </a>
                     </li>
 
                     <li class="nav-item  ">
                         <a href="javascript:;" class="nav-link">
-                            <span class="title">Services</span>
+                            <span class="title">Entry text</span>
                             <span class="arrow"></span>
                         </a>
                     </li>
