@@ -1,5 +1,6 @@
 @extends('admin.master')
 @section('content')
+    <body class=" login">
         <!-- BEGIN LOGO -->
         <div class="logo">
             <a href="index.html">
@@ -334,5 +335,5 @@
             </form>
             <!-- END REGISTRATION FORM -->
         </div>
-        <div class="copyright"> 2014 © Metronic. Admin Dashboard Template. </div>
+    </body>
 @endsection

@@ -35,6 +35,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <!-- BEGIN PAGE LEVEL PLUGINS -->
         <link href="{{URL::to('adminAssets/plugins/select2/css/select2.min.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{URL::to('adminAssets/plugins/select2/css/select2-bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+
         <!-- END PAGE LEVEL PLUGINS -->
         <!-- BEGIN THEME GLOBAL STYLES -->
         <link href="{{URL::to('adminAssets/css/components.min.css')}}" rel="stylesheet" id="style_components" type="text/css" />
@@ -42,6 +43,9 @@ License: You must have a valid license purchased only from themeforest(the above
         <!-- END THEME GLOBAL STYLES -->
         <!-- BEGIN PAGE LEVEL STYLES -->
         <link href="{{URL::to('adminAssets/css/login.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{URL::to('adminAssets/css/layout.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{URL::to('adminAssets/css/darkblue.min.css')}}" rel="stylesheet" type="text/css" id="style_color" />
+        <link href="{{URL::to('adminAssets/css/custom.min.css')}}" rel="stylesheet" type="text/css" />
         <!-- END PAGE LEVEL STYLES -->
         <!-- BEGIN THEME LAYOUT STYLES -->
         <!-- END THEME LAYOUT STYLES -->
@@ -49,7 +53,6 @@ License: You must have a valid license purchased only from themeforest(the above
     </head>
     <!-- END HEAD -->
 
-    <body class=" login">
         @if($errors)
         <div class="">
             @foreach($errors->all() as $err)
@@ -60,6 +63,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
         @yield('content')
 
+        <div class="copyright"> 2017 © Aimgine Admin. </div>
         <!--[if lt IE 9]>
         <script src="{{URL::to('adminAssets/plugins/respond.min.js')}}"></script>
         <script src="{{URL::to('adminAssets/plugins/excanvas.min.js')}}"></script>
@@ -85,6 +89,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <script src="{{URL::to('adminAssets/scripts/login.min.js')}}" type="text/javascript"></script>
         <!-- END PAGE LEVEL SCRIPTS -->
         <!-- BEGIN THEME LAYOUT SCRIPTS -->
+        <script src="{{URL::to('adminAssets/scripts/layout.min.js')}}" type="text/javascript"></script>
         <!-- END THEME LAYOUT SCRIPTS -->
         <script>
             $(document).ready(function()
@@ -95,5 +100,6 @@ License: You must have a valid license purchased only from themeforest(the above
                 });
             })
         </script>
+
     </body>
 </html>

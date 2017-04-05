@@ -17,7 +17,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('admin', 'admin\LoginController@doLogin');
     Route::get('admin/logout', 'admin\LoginController@logout');
 
-    Route::group(['middleware' => ['auth', 'checkAdmin']], function () {
+    Route::group(['middleware' => ['checkAdmin']], function () {
         Route::get('admin/index','admin\IndexController@index');
     });
 });
