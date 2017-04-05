@@ -20,5 +20,6 @@ Route::group(['middleware' => ['web']], function () {
     Route::group(['middleware' => ['checkAdmin']], function () {
         Route::get('admin/index','admin\IndexController@index');
         Route::resource('admin/home/slider', 'admin\home\SliderController');
+        Route::resource('admin/home/entrytext', 'admin\home\EntrytextController');
     });
 });

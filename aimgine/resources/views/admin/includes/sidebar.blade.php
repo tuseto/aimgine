@@ -65,9 +65,8 @@
                     </li>
 
                     <li class="nav-item  ">
-                        <a href="javascript:;" class="nav-link">
+                        <a href="{{ URL::to('admin/home/entrytext') }}" class="nav-link">
                             <span class="title">Entry text</span>
-                            <span class="arrow"></span>
                         </a>
                     </li>
                     <li class="nav-item  ">
