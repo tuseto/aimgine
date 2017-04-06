@@ -18,7 +18,7 @@ class ServiceController extends Controller
     }
 
     public function store(Request $request){
-        $this->validate($request, ['text' => 'required|min:3','image' => 'required','position' => 'required|unique:sliders']);
+        $this->validate($request, ['text' => 'required|min:3','image' => 'required','position' => 'required|unique:services']);
         $services = Service::orderBy('id', 'desc')->get();
         if($services->count() >= 4){
             return back()->withErrors('You already have 4 services');

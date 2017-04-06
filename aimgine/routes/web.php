@@ -23,5 +23,15 @@ Route::group(['middleware' => ['web']], function () {
         Route::resource('admin/home/entrytext', 'admin\home\EntrytextController');
         Route::resource('admin/home/service', 'admin\home\ServiceController');
 
+        Route::resource('admin/work/categories', 'admin\work\CategoriesController');
+
+        Route::resource('admin/work/projects/{project}/images', 'admin\work\ProjectImages');
+
+        Route::resource('admin/work/projects', 'admin\work\ProjectsController');
+
+
+
+
+
     });
 });

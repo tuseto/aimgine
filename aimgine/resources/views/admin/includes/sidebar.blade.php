@@ -95,12 +95,12 @@
                 </a>
                 <ul class="sub-menu">
                     <li class="nav-item  ">
-                        <a href="components_date_time_pickers.html" class="nav-link ">
+                        <a href="{{ URL::to('admin/work/categories') }}" class="nav-link ">
                             <span class="title">Categories</span>
                         </a>
                     </li>
                     <li class="nav-item  ">
-                        <a href="components_date_time_pickers.html" class="nav-link ">
+                        <a href="{{ URL::to('admin/work/projects') }}" class="nav-link ">
                             <span class="title">Project</span>
                         </a>
                     </li>
