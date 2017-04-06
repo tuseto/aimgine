@@ -70,9 +70,18 @@
                         </a>
                     </li>
                     <li class="nav-item  ">
+                        <a href="{{ URL::to('admin/home/service') }}" class="nav-link">
+                            <span class="title">Services</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
                         <a href="javascript:;" class="nav-link">
                             <span class="title">References</span>
-                            <span class="arrow"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="javascript:;" class="nav-link">
+                            <span class="title">Page tag</span>
                         </a>
                     </li>
 

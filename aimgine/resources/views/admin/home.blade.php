@@ -1,6 +1,5 @@
 @extends('admin.master')
 @section('content')
-<!DOCTYPE html>
 
     <body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white">
         <div class="page-wrapper">
