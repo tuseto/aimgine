@@ -48,6 +48,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <link href="{{URL::to('adminAssets/css/custom.min.css')}}" rel="stylesheet" type="text/css" />
 
         <link href="{{URL::to('adminAssets/css/customP.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{URL::to('adminAssets/css/summernote.css')}}" rel="stylesheet" type="text/css" />
 
         <!-- END PAGE LEVEL STYLES -->
         <!-- BEGIN THEME LAYOUT STYLES -->
@@ -94,6 +95,8 @@ License: You must have a valid license purchased only from themeforest(the above
         <!-- BEGIN THEME LAYOUT SCRIPTS -->
         <script src="{{URL::to('adminAssets/scripts/layout.min.js')}}" type="text/javascript"></script>
         <!-- END THEME LAYOUT SCRIPTS -->
+        <script src="{{URL::to('adminAssets/scripts/summernote.min.js')}}"></script>
+
         <script>
             $(document).ready(function()
             {
@@ -101,6 +104,57 @@ License: You must have a valid license purchased only from themeforest(the above
                 {
                     $('#radio1003').attr('checked', 'checked');
                 });
+                $('#summernote').summernote({
+                    minHeight: 400,
+                });
+
+                $('#fileName').val(makeid());
+                $('#newArticle').submit(function(e){
+                    // e.preventDefault();
+                    var textareaValue = $('#summernote').summernote('code');
+                    var fileName = $('#fileName').val();
+                    $.ajax({
+                        url: '../../../admin/api/newArticle',
+                        type: 'POST',
+                        data:{
+                            fileName: fileName,
+                            textArea: textareaValue,
+                            '_token': '{!! csrf_token() !!}',
+                        },
+                        success: function (data) {
+                            console.log(data);
+                        }
+                    });
+                });
+
+                $('#editArticle').submit(function(e){
+                    // e.preventDefault();
+                    var textareaValue = $('#summernote').summernote('code');
+                    var fileName = $('#oldFileName').val();
+                    console.log(fileName);
+                    $.ajax({
+                        url: '../../../../admin/api/newArticle',
+                        type: 'POST',
+                        data:{
+                            fileName: fileName,
+                            textArea: textareaValue,
+                            '_token': '{!! csrf_token() !!}',
+                        },
+                        success: function (data) {
+                            console.log(data);
+                        }
+                    });
+                });
+
+                function makeid(){
+                    var text = "";
+                    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+                    for( var i=0; i < 10; i++ ){
+                        text += possible.charAt(Math.floor(Math.random() * possible.length));
+                    }
+                    return text+".html";
+                }
             })
             $(document).click(function(){
                 $('.backMessage').css('visibility','hidden');

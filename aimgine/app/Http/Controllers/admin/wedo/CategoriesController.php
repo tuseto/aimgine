@@ -1,24 +1,24 @@
 <?php
 
-namespace App\Http\Controllers\admin\work;
+namespace App\Http\Controllers\admin\wedo;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\WorkCategories;
+use App\WedoCategories;
 class CategoriesController extends Controller
 {
     public function index() {
-        $categories = WorkCategories::orderBy('id', 'desc')->get();
-        return view('admin.work.categories.categories', compact('categories'));
+        $categories = WedoCategories::orderBy('id', 'desc')->get();
+        return view('admin.wedo.categories.categories', compact('categories'));
     }
 
     public function create(){
-        return view('admin.work.categories.add');
+        return view('admin.wedo.categories.add');
     }
 
     public function store(Request $request){
-        $this->validate($request, ['name' => 'required|min:3','position' => 'required|unique:work_categories']);
-        $category = new WorkCategories();
+        $this->validate($request, ['name' => 'required|min:3','position' => 'required|unique:wedo_categories']);
+        $category = new WedoCategories();
         $category->metatags = $request['metatags'];
         $category->position = $request['position'];
         $category->name = $request['name'];
@@ -29,11 +29,11 @@ class CategoriesController extends Controller
 
 
 
-    public function edit(WorkCategories $category){
-        return view('admin.work.categories.edit', compact('category'));
+    public function edit(WedoCategories $category){
+        return view('admin.wedo.categories.edit', compact('category'));
     }
 
-    public function update(Request $request,WorkCategories $category){
+    public function update(Request $request,WedoCategories $category){
         $this->validate($request, ['name' => 'required|min:3','position' => 'required']);
         $category->position = $request['position'];
         $category->metatags = $request['metatags'];
@@ -42,8 +42,8 @@ class CategoriesController extends Controller
         return back()->withErrors('Category updated');
     }
 
-    public function destroy(Request $request, WorkCategories $category) {
-        $category = WorkCategories::find($category->id);
+    public function destroy(Request $request, WedoCategories $category) {
+        $category = WedoCategories::find($category->id);
 
         $category->delete();
         return redirect()->back()->withErrors('Category deleted');

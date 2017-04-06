@@ -114,20 +114,16 @@
                 </a>
                 <ul class="sub-menu">
                     <li class="nav-item  ">
-                        <a href="components_date_time_pickers.html" class="nav-link ">
+                        <a href="{{ URL::to('admin/wedo/categories') }}" class="nav-link ">
                             <span class="title">Categories</span>
                         </a>
                     </li>
                     <li class="nav-item  ">
-                        <a href="components_date_time_pickers.html" class="nav-link ">
+                        <a href="{{ URL::to('admin/wedo/services') }}" class="nav-link ">
                             <span class="title">Service</span>
                         </a>
                     </li>
-                    <li class="nav-item  ">
-                        <a href="components_date_time_pickers.html" class="nav-link ">
-                            <span class="title">Information</span>
-                        </a>
-                    </li>
+                    
                 </ul>
             </li>
             <li class="nav-item  ">
