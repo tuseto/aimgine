@@ -104,6 +104,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 {
                     $('#radio1003').attr('checked', 'checked');
                 });
+
                 $('#summernote').summernote({
                     minHeight: 400,
                 });
@@ -134,6 +135,28 @@ License: You must have a valid license purchased only from themeforest(the above
                     console.log(fileName);
                     $.ajax({
                         url: '../../../../admin/api/newArticle',
+                        type: 'POST',
+                        data:{
+                            fileName: fileName,
+                            textArea: textareaValue,
+                            '_token': '{!! csrf_token() !!}',
+                        },
+                        success: function (data) {
+                            console.log(data);
+                        }
+                    });
+                });
+                $('#editApproach').submit(function(e){
+                    e.preventDefault();
+                    // console.log("asd");
+                    var textareaValue = $('#summernote').summernote('code');
+                    var fileName = $('#filename').val();
+                    //
+                    console.log(fileName);
+                    console.log(textareaValue);
+                    //
+                    $.ajax({
+                        url: '../../admin/api/ourapproach',
                         type: 'POST',
                         data:{
                             fileName: fileName,

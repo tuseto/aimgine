@@ -15,11 +15,13 @@ class ApiController extends Controller
         fclose($myfile);
     }
 
-    public function getArticle(Request $request){
+    public function editOurApproach(Request $request){
         $fileName = $request->fileName;
         $content = $request->textArea;
-        $myfile = fopen("content/articles/services/".$fileName, "w") or die("Unable to open file!");
+        $myfile = fopen("content/articles/ourapproach/".$fileName, "w") or die("Unable to open file!");
         fwrite($myfile, $content);
         fclose($myfile);
+        return("content/articles/ourapproach/".$fileName);
     }
+
 }

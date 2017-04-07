@@ -30,6 +30,15 @@ Route::group(['middleware' => ['web']], function () {
         Route::resource('admin/wedo/services', 'admin\wedo\ServicesController');
 
         Route::post('admin/api/newArticle','admin\api\ApiController@newArticle');
+        Route::post('admin/api/ourapproach','admin\api\ApiController@editOurApproach');
+
+
+
+        Route::resource('admin/whoarewe/team', 'admin\whoarewe\TeamController');
+        Route::resource('admin/whoarewe/testimonials', 'admin\whoarewe\TestimonialsController');
+
+        Route::get('admin/whoarewe/ourapproach', 'admin\whoarewe\OurApproachController@index');
+        // Route::post('admin/whoarewe/ourapproach', 'admin\whoarewe\OurApproachController@editing');
 
 
 

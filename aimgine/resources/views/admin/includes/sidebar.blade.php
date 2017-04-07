@@ -123,7 +123,7 @@
                             <span class="title">Service</span>
                         </a>
                     </li>
-                    
+
                 </ul>
             </li>
             <li class="nav-item  ">
@@ -134,17 +134,17 @@
                 </a>
                 <ul class="sub-menu">
                     <li class="nav-item  ">
-                        <a href="components_date_time_pickers.html" class="nav-link ">
+                        <a href="{{ URL::to('admin/whoarewe/team') }}" class="nav-link ">
                             <span class="title">Team</span>
                         </a>
                     </li>
                     <li class="nav-item  ">
-                        <a href="components_date_time_pickers.html" class="nav-link ">
+                        <a href="{{ URL::to('admin/whoarewe/testimonials') }}" class="nav-link ">
                             <span class="title">Testimonials</span>
                         </a>
                     </li>
                     <li class="nav-item  ">
-                        <a href="components_date_time_pickers.html" class="nav-link ">
+                        <a href="{{ URL::to('admin/whoarewe/ourapproach') }}" class="nav-link ">
                             <span class="title">Our approach</span>
                         </a>
                     </li>
