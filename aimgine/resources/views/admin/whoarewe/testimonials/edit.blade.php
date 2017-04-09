@@ -36,7 +36,7 @@
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Position</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" name="position" value="{{ $testimonial->person_name }}" id="exampleInputPassword1" placeholder="Position">
+                                            <input type="text" class="form-control" name="position" value="{{ $testimonial->position }}" id="exampleInputPassword1" placeholder="Position">
                                         </div>
                                     </div>
                                     <div class="form-group">
