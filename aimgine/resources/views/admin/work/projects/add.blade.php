@@ -27,7 +27,7 @@
                                                 <div class="form-group">
                                                     <label for="exampleInputPassword1">Name</label>
                                                     <div class="input-group">
-                                                        <input type="text" class="form-control" name="name" value="{{ old('name') }}" id="exampleInputPassword1" placeholder="Position">
+                                                        <input type="text" class="form-control" name="name" value="{{ old('name') }}" id="exampleInputPassword1" placeholder="Project name">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
@@ -35,11 +35,25 @@
                                                     <textarea class="form-control" rows="5" name="description">{{ old('description') }}</textarea>
                                                 </div>
                                                 <div class="form-group">
+                                                    <label>Meta</label>
+                                                    <textarea class="form-control" rows="5" name="meta">{{ old('meta') }}</textarea>
+                                                </div>
+                                                <div class="form-group">
                                                     <label for="exampleInputPassword1">Link</label>
                                                     <div class="input-group">
                                                         <input type="text" class="form-control" name="link" value="{{ old('link') }}" id="exampleInputPassword1" placeholder="Position">
                                                     </div>
                                                 </div>
+                                                <div class="form-group">
+                                                        <label>Category</label>
+                                                        <select class="form-control" name="category">
+                                                            @foreach($categories as $category)
+                                                            <option value="{{$category->id}}">{{$category->name}}</option>
+
+                                                            @endforeach
+
+                                                        </select>
+                                                    </div>
                                                 <div class="form-group">
                                                     <label class="col-md-3 control-label">Linked projects</label>
                                                     <div class="col-md-9">
@@ -60,7 +74,7 @@
                                             </div>
                                             <div class="form-actions">
                                                 <button type="submit" class="btn blue">Submit</button>
-                                                <button type="button" class="btn default">Cancel</button>
+                                                <button type="reset" class="btn default">Reset</button>
                                             </div>
                                             {!! csrf_field() !!}
                                         </form>

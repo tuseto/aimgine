@@ -27,16 +27,16 @@
                                                 <div class="form-group">
                                                     <label for="exampleInputPassword1">Category position</label>
                                                     <div class="input-group">
-                                                        <input type="text" class="form-control" name="position" value="{{ old('position') }}" id="exampleInputPassword1" placeholder="Position">
+                                                        <input type="text" class="form-control" name="position" value="{{ old('position') }}" id="exampleInputPassword1" placeholder="Category position">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Name</label>
-                                                    <input type="text" class="form-control" name="name" value="{{ old('name') }}">
+                                                    <input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Category name">
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Meta</label>
-                                                    <textarea class="form-control" rows="5" name="metatags">{{ old('metatags') }}</textarea>
+                                                    <textarea class="form-control" rows="5" name="meta">{{ old('meta') }}</textarea>
                                                 </div>
 
 

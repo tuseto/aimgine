@@ -32,21 +32,21 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Text</label>
-                                                    <textarea class="form-control" rows="3" name="text">{{$slider->text}}</textarea>
+                                                    <textarea class="form-control" rows="10" name="text">{{$slider->text}}</textarea>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="exampleInputFile1">Image</label>
                                                     <img src="{{URL::to('content/img/sliders/'.$slider->image)}}"
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="exampleInputFile1">Image</label>
+                                                    <label for="exampleInputFile1">Choose new image</label>
                                                     <input type="file" id="exampleInputFile1" name="image">
                                                 </div>
 
                                             </div>
                                             <div class="form-actions">
                                                 <button type="submit" class="btn blue">Submit</button>
-                                                <button type="button" class="btn default">Cancel</button>
+                                                <button type="reset" class="btn default">Reset</button>
                                             </div>
                                             {!! csrf_field() !!}
                                         </form>

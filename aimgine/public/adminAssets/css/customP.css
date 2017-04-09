@@ -2,7 +2,7 @@
     position: absolute;
     background: grey;
     color: white;
-    top: 40%;
+    top: 0px;
     z-index: 9999999999;
     width: 100%;
     text-align: center;
@@ -23,4 +23,11 @@
 }
 .actionBtns::after{
     content: none !important;
+}
+.fitImageToContainer{
+    max-width: 100% ;
+
+}
+.updatedReferences{
+    height: auto !important;
 }

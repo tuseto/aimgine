@@ -19,30 +19,27 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::group(['middleware' => ['checkAdmin']], function () {
         Route::get('admin/index','admin\IndexController@index');
+
         Route::resource('admin/home/slider', 'admin\home\SliderController');
         Route::resource('admin/home/entrytext', 'admin\home\EntrytextController');
         Route::resource('admin/home/service', 'admin\home\ServiceController');
-        Route::resource('admin/work/categories', 'admin\work\CategoriesController');
-        Route::resource('admin/work/projects/{project}/images', 'admin\work\ProjectImages');
-        Route::resource('admin/work/projects', 'admin\work\ProjectsController');
+        Route::get('admin/home/references', 'admin\home\ReferenceController@index');
+        Route::put('admin/home/references', 'admin\home\ReferenceController@update');
 
-        Route::resource('admin/wedo/categories', 'admin\wedo\CategoriesController');
-        Route::resource('admin/wedo/services', 'admin\wedo\ServicesController');
+        Route::resource('admin/work/categories', 'admin\work\CategoryController');
+        Route::resource('admin/work/projects/{project}/images', 'admin\work\ProjectImageController');
+        Route::resource('admin/work/projects', 'admin\work\ProjectController');
+
+        Route::resource('admin/wedo/categories', 'admin\wedo\CategoryController');
+        Route::resource('admin/wedo/services', 'admin\wedo\ServiceController');
+
+        Route::resource('admin/whoarewe/team', 'admin\whoarewe\TeamController');
+        Route::resource('admin/whoarewe/testimonials', 'admin\whoarewe\TestimonialController');
+        Route::get('admin/whoarewe/ourapproach', 'admin\whoarewe\OurApproachController@index');
+        Route::post('admin/whoarewe/ourapproach', 'admin\whoarewe\OurApproachController@update');
 
         Route::post('admin/api/newArticle','admin\api\ApiController@newArticle');
         Route::post('admin/api/ourapproach','admin\api\ApiController@editOurApproach');
-
-
-
-        Route::resource('admin/whoarewe/team', 'admin\whoarewe\TeamController');
-        Route::resource('admin/whoarewe/testimonials', 'admin\whoarewe\TestimonialsController');
-
-        Route::get('admin/whoarewe/ourapproach', 'admin\whoarewe\OurApproachController@index');
-        // Route::post('admin/whoarewe/ourapproach', 'admin\whoarewe\OurApproachController@editing');
-
-
-
-
 
     });
 });

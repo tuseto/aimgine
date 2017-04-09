@@ -148,13 +148,10 @@ License: You must have a valid license purchased only from themeforest(the above
                 });
                 $('#editApproach').submit(function(e){
                     e.preventDefault();
-                    // console.log("asd");
+
                     var textareaValue = $('#summernote').summernote('code');
                     var fileName = $('#filename').val();
-                    //
-                    console.log(fileName);
-                    console.log(textareaValue);
-                    //
+
                     $.ajax({
                         url: '../../admin/api/ourapproach',
                         type: 'POST',
@@ -164,7 +161,11 @@ License: You must have a valid license purchased only from themeforest(the above
                             '_token': '{!! csrf_token() !!}',
                         },
                         success: function (data) {
-                            console.log(data);
+                            if(data == "success"){
+                                alert("Our approach file successfully updated")
+                            }else if (data == "fail") {
+                                alert("Something went wrong")
+                            }
                         }
                     });
                 });

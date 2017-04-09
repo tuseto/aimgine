@@ -54,7 +54,7 @@
                                                     <td>
                                                         {{$project->description}}
                                                     </td>
-                                                    
+
                                                     <td class="center"> {{$project->created_at}} </td>
                                                     <td>
                                                         <div class="btn-group">
@@ -81,7 +81,7 @@
                                                     </td>
                                                 </tr>
                                                 @endforeach
-
+                                                {{$projects->links()}}
                                             </tbody>
                                         </table>
 

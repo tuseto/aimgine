@@ -37,7 +37,7 @@
 
                                                 <div class="form-group">
                                                     <label>Meta</label>
-                                                    <textarea class="form-control" rows="5" name="metatags">{{ $category->metatags }}</textarea>
+                                                    <textarea class="form-control" rows="5" name="meta">{{ $category->meta }}</textarea>
                                                 </div>
 
                                             </div>

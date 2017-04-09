@@ -17,9 +17,10 @@ class CreateWorkProjectsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->text('description');
+            $table->text('meta')->nullable();
+            $table->integer('category_id')->unsigned()->nullable();
             $table->text('thumbnail');
-            $table->text('link');
-
+            $table->string('link');
             $table->timestamps();
         });
     }

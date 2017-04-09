@@ -11,7 +11,7 @@
         <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
         <!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
         <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-        <ul class="page-sidebar-menu  page-header-fixed " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="padding-top: 20px">
+        <ul class="page-sidebar-menu  page-header-fixed " data-keep-expanded="false" data-auto-scroll="false" data-slide-speed="200" style="padding-top: 20px">
             <!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
             <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
             <li class="sidebar-toggler-wrapper hide">
@@ -40,8 +40,8 @@
                 </form>
                 <!-- END RESPONSIVE QUICK SEARCH FORM -->
             </li>
-            <li class="nav-item start active open">
-                <a href="javascript:;" class="nav-link">
+            <li class="nav-item start">
+                <a href="{{URL::to('admin')}}" class="nav-link">
                     <i class="icon-home"></i>
                     <span class="title">Dashboard</span>
                     <span class="selected"></span>
@@ -60,7 +60,7 @@
                 <ul class="sub-menu">
                     <li class="nav-item  ">
                         <a href="{{ URL::to('admin/home/slider') }}" class="nav-link ">
-                            <span class="title">Slider</span>
+                            <span class="title">Sliders</span>
                         </a>
                     </li>
 
@@ -75,7 +75,7 @@
                         </a>
                     </li>
                     <li class="nav-item  ">
-                        <a href="javascript:;" class="nav-link">
+                        <a href="{{URL::to('admin/home/references')}}" class="nav-link">
                             <span class="title">References</span>
                         </a>
                     </li>
@@ -101,7 +101,7 @@
                     </li>
                     <li class="nav-item  ">
                         <a href="{{ URL::to('admin/work/projects') }}" class="nav-link ">
-                            <span class="title">Project</span>
+                            <span class="title">Projects</span>
                         </a>
                     </li>
                 </ul>
@@ -120,7 +120,7 @@
                     </li>
                     <li class="nav-item  ">
                         <a href="{{ URL::to('admin/wedo/services') }}" class="nav-link ">
-                            <span class="title">Service</span>
+                            <span class="title">Services</span>
                         </a>
                     </li>
 

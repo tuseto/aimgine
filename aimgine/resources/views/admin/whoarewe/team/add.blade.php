@@ -27,7 +27,7 @@
                                                 <div class="form-group">
                                                     <label for="exampleInputPassword1">Name</label>
                                                     <div class="input-group">
-                                                        <input type="text" class="form-control" name="name" value="{{ old('name') }}" id="exampleInputPassword1" placeholder="Position">
+                                                        <input type="text" class="form-control" name="name" value="{{ old('name') }}" id="exampleInputPassword1" placeholder="Name">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
@@ -42,7 +42,7 @@
                                             </div>
                                             <div class="form-actions">
                                                 <button type="submit" class="btn blue">Submit</button>
-                                                <button type="button" class="btn default">Cancel</button>
+                                                <button type="reset" class="btn default">Reset</button>
                                             </div>
                                             {!! csrf_field() !!}
                                         </form>

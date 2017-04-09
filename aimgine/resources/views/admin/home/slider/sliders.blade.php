@@ -84,9 +84,11 @@
                                                     </td>
                                                 </tr>
                                                 @endforeach
+                                                {{$sliders->links()}}
 
                                             </tbody>
                                         </table>
+
                                     </div>
                                 </div>
                                 <!-- END EXAMPLE TABLE PORTLET-->

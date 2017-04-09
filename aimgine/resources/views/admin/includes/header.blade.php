@@ -4,7 +4,7 @@
     <div class="page-header-inner ">
         <!-- BEGIN LOGO -->
         <div class="page-logo">
-            <a href="index.html">
+            <a href="{{URL::to('admin')}}">
                 <img src="{{URL::to('adminAssets/img/aimgine-logo.png')}}" alt="logo" class="logo-default" style="max-width:100px;" /> </a>
             <div class="menu-toggler sidebar-toggler">
                 <span></span>

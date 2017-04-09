@@ -26,14 +26,14 @@
                                                     {!! method_field('PUT') !!}
                                                 <div class="form-group">
                                                     <label>Text</label>
-                                                    <textarea class="form-control" rows="3" name="text">{{ $entrytext->text }}</textarea>
+                                                    <textarea class="form-control" rows="10" name="text">{{ $entrytext->text }}</textarea>
                                                 </div>
 
 
                                             </div>
                                             <div class="form-actions">
                                                 <button type="submit" class="btn blue">Submit</button>
-                                                <button type="button" class="btn default">Cancel</button>
+                                                <button type="reset" class="btn default">Reset</button>
                                             </div>
                                             {!! csrf_field() !!}
                                         </form>

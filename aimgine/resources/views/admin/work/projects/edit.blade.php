@@ -38,7 +38,11 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Description</label>
-                                                    <textarea class="form-control" rows="5" name="description">{{ $project->description }}</textarea>
+                                                    <textarea class="form-control" rows="10" name="description">{{ $project->description }}</textarea>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Meta tags</label>
+                                                    <textarea class="form-control" rows="3" name="meta">{{ $project->meta }}</textarea>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="exampleInputPassword1">Link</label>
@@ -47,22 +51,34 @@
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
+                                                        <label>Category</label>
+                                                        <select class="form-control" name="category">
+                                                            @foreach($categories as $category)
+                                                            @if($category->id == $project->category_id)
+                                                            <option value="{{$category->id}}" selected>{{$category->name}}</option>
+
+                                                            @else
+                                                            <option value="{{$category->id}}">{{$category->name}}</option>
+
+                                                            @endif
+                                                            @endforeach
+
+                                                        </select>
+                                                    </div>
+                                                <div class="form-group">
                                                     <label class="col-md-3 control-label">Linked projects</label>
                                                     <div class="col-md-9">
                                                         <div class="mt-checkbox-inline">
                                                             @foreach($projects as $proj)
-
                                                             <?php $checked = "" ?>
                                                                 @foreach($linkedProjects as $lproj)
-
                                                                     @if($proj->id == $lproj->linked_project_id)
-                                                                    <?php $checked = "checked";?>
+                                                                        <?php $checked = "checked";?>
                                                                     @endif
                                                                 @endforeach
                                                             <label class="mt-checkbox">
                                                                 <input type="checkbox" id="inlineCheckbox21" name="linkedProjects[]" value="{{$proj->id}}" {{$checked or ''}} > {{$proj->name}}<span></span>
                                                             </label>
-
                                                             @endforeach
                                                         </div>
                                                     </div>
@@ -71,29 +87,31 @@
                                                     <label for="exampleInputFile1">Image</label>
                                                     <input type="file" id="exampleInputFile1" name="image">
                                                 </div>
-
-                                                @foreach($images as $image)
-                                                <?php $checked = "";?>
-
-                                                    @if($image->project_id == $project->id)
-                                                        @if($image->id == $project->thumbnail)
-                                                        <?php $checked = "checked";?>
-                                                        @endif
-                                                        <label class="mt-checkbox">
-                                                            <input type="radio" id="inlineCheckbox21" name="imgthumb" value="{{$image->id}}" {{$checked or ''}} > <span></span>
-                                                        </label>
-                                                        <div style="width:200px;">
-                                                            <img style="max-width:100%;" src="{{URL::to('content/img/projects/'.$image->image)}}" />
-                                                        </div>
-
-                                                    @endif
-                                                @endforeach
-
-
+                                                <div class="form-group">
+                                                    <label for="exampleInputFile1">Pick a thumbnail</label>
+                                                    <div class="row">
+                                                        @foreach($images as $image)
+                                                            <?php $checked = "";?>
+                                                            @if($image->project_id == $project->id)
+                                                                @if($image->id == $project->thumbnail)
+                                                                    <?php $checked = "checked";?>
+                                                                @endif
+                                                                <div class="col-sm-3">
+                                                                    <label class="mt-checkbox">
+                                                                        <input type="radio" id="inlineCheckbox21" name="imgthumb" value="{{$image->id}}" {{$checked or ''}} > <span></span>
+                                                                    </label>
+                                                                    <div style="width:200px;">
+                                                                        <img style="max-width:100%;" src="{{URL::to('content/img/projects/'.$image->image)}}" />
+                                                                    </div>
+                                                                </div>
+                                                            @endif
+                                                        @endforeach
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="form-actions">
                                                 <button type="submit" class="btn blue">Submit</button>
-                                                <button type="button" class="btn default">Cancel</button>
+                                                <button type="reset" class="btn default">Reset</button>
                                             {!! csrf_field() !!}
                                         </form>
 

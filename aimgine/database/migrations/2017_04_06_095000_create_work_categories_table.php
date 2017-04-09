@@ -17,7 +17,7 @@ class CreateWorkCategoriesTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->integer('position');
-            $table->text('metatags');
+            $table->text('meta')->nullable();
             $table->timestamps();
         });
     }

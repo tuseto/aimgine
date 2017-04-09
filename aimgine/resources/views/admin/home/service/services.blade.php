@@ -55,7 +55,7 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <img src="{{URL::to('content/img/services/'.$service->svg)}}" />
+                                        <img class="fitImageToContainer" src="{{URL::to('content/img/services/'.$service->svg)}}" />
 
                                     </div>
                                     <div class="portlet-body">{{$service->text}}</div>

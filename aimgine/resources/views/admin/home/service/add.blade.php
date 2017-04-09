@@ -32,7 +32,7 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Text</label>
-                                                    <textarea class="form-control" rows="3" name="text">{{ old('text') }}</textarea>
+                                                    <textarea class="form-control" rows="10" name="text">{{ old('text') }}</textarea>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="exampleInputFile1">Image</label>
@@ -42,7 +42,7 @@
                                             </div>
                                             <div class="form-actions">
                                                 <button type="submit" class="btn blue">Submit</button>
-                                                <button type="button" class="btn default">Cancel</button>
+                                                <button type="reset" class="btn default">Reset</button>
                                             </div>
                                             {!! csrf_field() !!}
                                         </form>

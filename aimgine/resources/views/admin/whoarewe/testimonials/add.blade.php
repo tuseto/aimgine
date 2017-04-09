@@ -27,19 +27,19 @@
                                                 <div class="form-group">
                                                     <label for="exampleInputPassword1">Client Name</label>
                                                     <div class="input-group">
-                                                        <input type="text" class="form-control" name="client_name" value="{{ old('name') }}" id="exampleInputPassword1" placeholder="Position">
+                                                        <input type="text" class="form-control" name="client_name" value="{{ old('client_name') }}" id="exampleInputPassword1" placeholder="Client name">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="exampleInputPassword1">Person Name</label>
                                                     <div class="input-group">
-                                                        <input type="text" class="form-control" name="person_name" value="{{ old('name') }}" id="exampleInputPassword1" placeholder="Position">
+                                                        <input type="text" class="form-control" name="person_name" value="{{ old('person_name') }}" id="exampleInputPassword1" placeholder="Person name">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="exampleInputPassword1">Position</label>
                                                     <div class="input-group">
-                                                        <input type="text" class="form-control" name="position" value="{{ old('name') }}" id="exampleInputPassword1" placeholder="Position">
+                                                        <input type="text" class="form-control" name="position" value="{{ old('position') }}" id="exampleInputPassword1" placeholder="Position">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
@@ -54,7 +54,7 @@
                                             </div>
                                             <div class="form-actions">
                                                 <button type="submit" class="btn blue">Submit</button>
-                                                <button type="button" class="btn default">Cancel</button>
+                                                <button type="reset" class="btn default">Reset</button>
                                             </div>
                                             {!! csrf_field() !!}
                                         </form>
