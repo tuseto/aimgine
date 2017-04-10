@@ -157,11 +157,23 @@
                 </a>
             </li>
             <li class="nav-item  ">
-                <a href="javascript:;" class="nav-link">
+                <a href="javascript:;" class="nav-link nav-toggle">
                     <i class="icon-puzzle"></i>
                     <span class="title">Contact us</span>
                     <span class="arrow"></span>
                 </a>
+                <ul class="sub-menu">
+                    <li class="nav-item  ">
+                        <a href="{{ URL::to('admin/contactus/forms') }}" class="nav-link ">
+                            <span class="title">Forms</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="{{ URL::to('admin/contactus/elements') }}" class="nav-link ">
+                            <span class="title">Elements</span>
+                        </a>
+                    </li>
+                </ul>
             </li>
             <li class="nav-item  ">
                 <a href="javascript:;" class="nav-link nav-toggle">
