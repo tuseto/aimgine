@@ -54,13 +54,11 @@
                                                         <label>Category</label>
                                                         <select class="form-control" name="category">
                                                             @foreach($categories as $category)
-                                                            @if($category->id == $project->category_id)
-                                                            <option value="{{$category->id}}" selected>{{$category->name}}</option>
-
-                                                            @else
-                                                            <option value="{{$category->id}}">{{$category->name}}</option>
-
-                                                            @endif
+                                                                @if($category->id == $project->category_id)
+                                                                    <option value="{{$category->id}}" selected>{{$category->name}}</option>
+                                                                @else
+                                                                    <option value="{{$category->id}}">{{$category->name}}</option>
+                                                                @endif
                                                             @endforeach
 
                                                         </select>

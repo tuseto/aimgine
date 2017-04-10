@@ -151,10 +151,9 @@
                 </ul>
             </li>
             <li class="nav-item  ">
-                <a href="javascript:;" class="nav-link">
+                <a href="{{ URL::to('admin/ourclients') }}" class="nav-link">
                     <i class="icon-puzzle"></i>
                     <span class="title">Our clients</span>
-                    <span class="arrow"></span>
                 </a>
             </li>
             <li class="nav-item  ">

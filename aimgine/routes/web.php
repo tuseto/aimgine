@@ -38,6 +38,8 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('admin/whoarewe/ourapproach', 'admin\whoarewe\OurApproachController@index');
         Route::post('admin/whoarewe/ourapproach', 'admin\whoarewe\OurApproachController@update');
 
+        Route::resource('admin/ourclients', 'admin\ourclients\OurClientsController');
+
         Route::post('admin/api/newArticle','admin\api\ApiController@newArticle');
         Route::post('admin/api/ourapproach','admin\api\ApiController@editOurApproach');
 
