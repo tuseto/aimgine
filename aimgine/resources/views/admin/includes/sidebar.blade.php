@@ -183,12 +183,12 @@
                 </a>
                 <ul class="sub-menu">
                     <li class="nav-item  ">
-                        <a href="components_date_time_pickers.html" class="nav-link ">
+                        <a href="{{ URL::to('admin/blog/categories') }}" class="nav-link ">
                             <span class="title">Category</span>
                         </a>
                     </li>
                     <li class="nav-item  ">
-                        <a href="components_date_time_pickers.html" class="nav-link ">
+                        <a href="{{ URL::to('admin/blog/articles') }}" class="nav-link ">
                             <span class="title">Article</span>
                         </a>
                     </li>

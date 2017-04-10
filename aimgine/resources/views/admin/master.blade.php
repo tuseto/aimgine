@@ -170,6 +170,49 @@ License: You must have a valid license purchased only from themeforest(the above
                     });
                 });
 
+                $('#addBlogArticle').submit(function(e){
+                    // e.preventDefault();
+                    var textareaValue = $('#summernote').summernote('code');
+                    var fileName = $('#fileName').val();
+                    console.log(textareaValue);
+                    console.log(fileName);
+
+                    $.ajax({
+                        url: '../../../admin/api/newBlogArticle',
+                        type: 'POST',
+                        data:{
+                            fileName: fileName,
+                            textArea: textareaValue,
+                            '_token': '{!! csrf_token() !!}',
+                        },
+                        success: function (data) {
+                            if(data == "success"){
+                                alert("Our approach file successfully updated")
+                            }else if (data == "fail") {
+                                alert("Something went wrong")
+                            }
+                        }
+                    });
+                });
+                $('#editBlogArticle').submit(function(e){
+                    // e.preventDefault();
+                    var textareaValue = $('#summernote').summernote('code');
+                    var fileName = $('#oldFileName').val();
+                    console.log(fileName);
+                    $.ajax({
+                        url: '../../../../admin/api/newBlogArticle',
+                        type: 'POST',
+                        data:{
+                            fileName: fileName,
+                            textArea: textareaValue,
+                            '_token': '{!! csrf_token() !!}',
+                        },
+                        success: function (data) {
+                            console.log(data);
+                        }
+                    });
+                });
+
                 function makeid(){
                     var text = "";
                     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";

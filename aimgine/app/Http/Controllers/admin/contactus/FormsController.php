@@ -19,7 +19,6 @@ class FormsController extends Controller
                 array_push($elArray[$form->id],$el->element_name);
             }
         }
-        // dd($elArray);
 
         return view('admin.contactus.forms.forms', compact('forms','elements','elArray'));
     }

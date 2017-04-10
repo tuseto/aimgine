@@ -41,10 +41,15 @@ Route::group(['middleware' => ['web']], function () {
         Route::resource('admin/contactus/forms', 'admin\contactus\FormsController');
         Route::resource('admin/contactus/elements', 'admin\contactus\ElementsController');
 
+        Route::resource('admin/blog/categories', 'admin\blog\CategoryController');
+        Route::resource('admin/blog/articles', 'admin\blog\ArticleController');
+
         Route::resource('admin/ourclients', 'admin\ourclients\OurClientsController');
 
         Route::post('admin/api/newArticle','admin\api\ApiController@newArticle');
         Route::post('admin/api/ourapproach','admin\api\ApiController@editOurApproach');
+        Route::post('admin/api/newBlogArticle','admin\api\ApiController@newBlogArticle');
+
 
     });
 });

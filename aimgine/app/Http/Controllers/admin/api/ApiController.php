@@ -27,8 +27,13 @@ class ApiController extends Controller
         } catch (Exception $e) {
             return "fail";
         }
-
-
+    }
+    public function newBlogArticle(Request $request){
+        $fileName = $request->fileName;
+        $content = $request->textArea;
+        $myfile = fopen("content/articles/blog/".$fileName, "w") or die("Unable to open file!");
+        fwrite($myfile, $content);
+        fclose($myfile);
     }
 
 }
