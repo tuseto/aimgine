@@ -44,6 +44,8 @@ Route::group(['middleware' => ['web']], function () {
         Route::resource('admin/blog/categories', 'admin\blog\CategoryController');
         Route::resource('admin/blog/articles', 'admin\blog\ArticleController');
 
+        Route::resource('admin/pagetags', 'admin\PagetagsController');
+
         Route::resource('admin/ourclients', 'admin\ourclients\OurClientsController');
 
         Route::post('admin/api/newArticle','admin\api\ApiController@newArticle');

@@ -79,11 +79,7 @@
                             <span class="title">References</span>
                         </a>
                     </li>
-                    <li class="nav-item  ">
-                        <a href="javascript:;" class="nav-link">
-                            <span class="title">Page tag</span>
-                        </a>
-                    </li>
+
 
                 </ul>
             </li>
@@ -193,6 +189,11 @@
                         </a>
                     </li>
                 </ul>
+            </li>
+            <li class="nav-item  ">
+                <a href="{{URL::to('admin/pagetags')}}" class="nav-link">
+                    <span class="title">Page tags</span>
+                </a>
             </li>
 
         </ul>
