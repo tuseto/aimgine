@@ -1,0 +1,115 @@
+@media (min-width: 768px) and (max-width: 979px) {
+	
+	/* SITE NAVIGATION */
+	
+	.h-navbar .site-nav { float: none; padding: 35px 0 5px; }
+	
+	.h-navbar .site-nav ul {
+		text-align: center;
+	}
+	
+	.h-navbar .site-nav ul > li {
+		float: none;
+		display: inline-block;
+		margin: 0 15px 0 15px;
+	}
+	
+	.h-navbar .site-nav ul > li a {
+		color: #fff;
+		font-family: "Exo";
+		font-size: 14px;
+		font-weight: 800;
+		text-transform: uppercase;
+		
+		text-decoration: none;
+	}
+	
+	.h-navbar .site-nav a:first-child { margin-left: 0; }
+	.h-navbar .site-nav a:last-child { margin-right: 0; }
+	
+	.h-navbar .social-buttons {
+		float: none;
+		margin: 15px 0 15px;
+		text-align: center;
+	}
+	
+	.h-navbar .social-buttons > a {
+		width: 30px;
+		height: 30px;
+		text-indent: -99999px;
+		display: inline-block;
+		margin: 0 0 0 10px;
+	}
+	
+	
+	
+	/* HOME PAGE */
+	
+	.home-services .fbut-part .sep-line {
+		display: block;
+		position: relative;
+		background: url(../images/sep-h-services@tablet.png) no-repeat center;
+		height: 65px;
+	}
+	
+	
+	/* INNER pages */
+	
+	.head-bar .page-descr {
+		padding: 0 80px;
+	}
+	
+	
+	
+	
+	/* PROJECTS */
+	
+	.projects-thumbs .thumb_holder .img_h {
+		height: 113px;
+	}
+	
+	.projects-thumbs .thumb_holder {
+		min-height: 170px;
+	}
+	
+	.projects-thumbs .thumb_holder h4 {
+		font-size: 14px;	
+		font-weight: normal;
+	}
+	
+	
+	
+	
+	/* BLOG POST */
+	
+	.blog-post .post-description {
+		position: relative;
+		padding: 0;
+	}
+	
+	.blog-post .post-description h2,
+	.blog-post .post-description h3,
+	.blog-post .post-description h4,
+	.blog-post .post-description h5,
+	.blog-post .post-description h6 {
+		margin: 2px 0 10px;
+		position: static;
+		width: auto;
+	}
+	
+	
+	/* SHARE WITH LOVE */
+
+	.share-with-love {
+		position: relative;
+		padding: 20px 20px 10px;
+		border-top: 1px solid #eaeaea;
+		width: 684px;
+	}
+	
+	.share-with-love h4 {
+		position: static;
+	}
+	
+	
+}

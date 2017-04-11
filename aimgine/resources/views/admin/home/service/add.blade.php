@@ -27,7 +27,13 @@
                                                 <div class="form-group">
                                                     <label for="exampleInputPassword1">Service position</label>
                                                     <div class="input-group">
-                                                        <input type="text" class="form-control" name="position" value="{{ old('position') }}" id="exampleInputPassword1" placeholder="Position">
+                                                        <input type="text" class="form-control" name="position" value="{{ old('position') }}" id="exampleInputPassword1" placeholder="Name">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleInputPassword1">Service name</label>
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" name="name" value="{{ old('name') }}" id="exampleInputPassword1" placeholder="Position">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">

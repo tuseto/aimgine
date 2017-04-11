@@ -20,6 +20,12 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
+                                        <label for="exampleInputPassword1">Service name</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" name="name" value="{{ $service->name }}" id="exampleInputPassword1" placeholder="Name">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
                                         <label>Text</label>
                                         <textarea class="form-control" rows="10" name="text">{{ $service->text }}</textarea>
                                     </div>

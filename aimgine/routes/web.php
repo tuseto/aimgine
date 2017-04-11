@@ -55,3 +55,21 @@ Route::group(['middleware' => ['web']], function () {
 
     });
 });
+Route::get('/', 'client\IndexController@index');
+Route::get('/', 'client\IndexController@index');
+
+Route::get('/work', 'client\WorkController@index');
+Route::get('/work/{categoryname}/{category}', 'client\WorkController@showCategory');
+Route::get('/work/{categoryname}/{projectname}/{project}', 'client\WorkController@showProject');
+
+Route::get('/our-services/{catname}/{wedocategory}', 'client\OurServicesController@index');
+
+Route::get('/who-we-are/team', 'client\WhoareweController@team');
+Route::get('/who-we-are/testimonials', 'client\WhoareweController@testimonials');
+Route::get('/who-we-are/ourapproach', 'client\WhoareweController@ourapproach');
+
+Route::get('/our-clients', 'client\OurclientsController@index');
+Route::get('/contact-us', 'client\ContactusController@index');
+Route::get('/blog', 'client\BlogController@index');
+Route::get('/blog/{catname}/{projectname}/{article}', 'client\BlogController@singleArticle');
+Route::get('/blog/{catname}/{category}', 'client\BlogController@categoryArticles');

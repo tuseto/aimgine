@@ -17,4 +17,9 @@ class Project extends Model
         return $this->belongsTo('App\Models\Work\Category','id');
     }
 
+    public function relatedProjects()
+    {
+        return $this->belongsToMany('App\Models\Work\Project','work_project_links','project_id','linked_project_id');
+    }
+
 }

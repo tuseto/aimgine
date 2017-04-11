@@ -26,6 +26,7 @@ class ServiceController extends Controller
     public function store(Request $request){
         $this->validate($request, ['text' => 'required|min:3',
         'image' => 'required',
+        'name' => 'required',
         'position' => 'required|unique:home_services|digits_between:1,4']);
 
         $services = Service::orderBy('id', 'desc')->get();
@@ -57,6 +58,8 @@ class ServiceController extends Controller
             }
             $service->position = $request['position'];
             $service->text = $request['text'];
+            $service->name = $request['name'];
+            
             $service->save();
             $services = Service::orderBy('id', 'desc')->get();
             return view('admin.home.service.services', compact('services'))->withErrors('Service saved');
@@ -74,6 +77,7 @@ class ServiceController extends Controller
 
     public function update(Request $request,Service $service){
         $this->validate($request, ['text' => 'required|min:3',
+        'name' => 'required',
         'position' => 'required|unique:home_services,position,'.$service->id.',id|digits_between:1,4']);
         if($request->file('image') !== null){
             $imgResource = $request->file('image');
@@ -106,6 +110,8 @@ class ServiceController extends Controller
         }
         $service->position = $request['position'];
         $service->text = $request['text'];
+        $service->name = $request['name'];
+
         $service->save();
         return back()->withErrors('Service updated');
     }
