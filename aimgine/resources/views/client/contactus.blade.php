@@ -134,9 +134,11 @@ Modernizr.load({
 				<section class="in_section">
 
 					<form class="contact-form form">
+						@if($elements !== null)
                         @foreach($elements as $element)
                         {!!$element->element!!}
                         @endforeach
+						@endif
 
 
 					</form><!-- contact form -->
