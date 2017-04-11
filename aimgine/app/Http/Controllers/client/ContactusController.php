@@ -20,6 +20,8 @@ class ContactusController extends Controller
         if($form !== null){
             $elements=$form->elements()->get();
 
+        }else{
+            $elements = null;
         }
 
 
